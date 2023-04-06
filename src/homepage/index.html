@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex">
+        <a class="home-button" href="#">
+          <h1>The<br />Movie<br />Watchlist</h1>
+        </a>
+      </div>
+      <input type="text" placeholder="Search a movie or a series" />
+      <a class="watchlist-button" href="../watchlist">
+        <div><p>Watchlist</p></div>
+      </a>
+    </header>
+    <main>
+      <div>
+        <section>
+          <h2>Currently Watching</h2>
+          <div id="current-watch-list"></div>
+        </section>
+        <section>
+          <h2>Suggested to Watch</h2>
+          <div id="suggested-watch-list"></div>
+        </section>
+      </div>
+      <div>
+        <section>
+          <h2>Previously Watched</h2>
+          <div id="previous-watch-list"></div>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./homepage.js"></script>
+  </body>
+</html>

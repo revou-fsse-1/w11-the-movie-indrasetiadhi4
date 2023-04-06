@@ -8,30 +8,41 @@
   <body>
     <div class="container flex">
       <h1>The<br />Movie<br />Watchlist</h1>
-      <form id="form-login">
+      <form id="form-register">
         <input
-          id="login-username"
+          id="signup-username"
           type="text"
           placeholder="Username"
           required
         />
         <input
-          id="login-password"
+          id="signup-email"
+          type="email"
+          placeholder="Email Address"
+          required
+        />
+        <input
+          id="signup-password"
           type="password"
           placeholder="Password"
           required
         />
+        <input
+          id="signup-confirm-password"
+          type="password"
+          placeholder="Confirm Password"
+          required
+        />
         <div class="button">
-          <button id="button-login" type="submit">Login</button>
+          <button id="button-register" type="submit">Register</button>
           <p>
-            You don't have an account?
-            <a class="font-medium" href="./register">SignUp</a>
+            Already have an account? <a class="font-medium" href="../">Login</a>
           </p>
         </div>
       </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="./login.js"></script>
+    <script type="module" src="./register.js"></script>
   </body>
 </html>
