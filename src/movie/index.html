@@ -3,21 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/ebafe5899b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <header>
-      <div class="container flex">
-        <a class="home-button" href="../homepage">
+  <body class="mx-24 max-[390px]:mx-2">
+    <header
+      class="flex flex-wrap justify-between my-12 items-start max-[390px]:items-center"
+    >
+      <div>
+        <a
+          class="home-button text-4xl text-left leading-normal font-bold"
+          href="../homepage"
+        >
           <h1>The<br />Movie<br />Watchlist</h1>
         </a>
       </div>
-      <input type="text" placeholder="Search a movie or a series" />
-      <a class="watchlist-button" href="../watchlist">
-        <div><p>Watchlist</p></div>
+      <input
+        type="text"
+        placeholder="🔍 Search a movie or a series"
+        class="w-96 px-2 py-2 mb-2 bg-gray-300 rounded-2xl text-center font-medium placeholder-gray-900 focus:placeholder-gray-600 max-[390px]:hidden"
+      />
+      <input
+        type="text"
+        placeholder="🔍"
+        class="hidden w-10 px-2 py-2 mb-2 bg-gray-300 rounded-full text-center font-medium placeholder-gray-900 focus:placeholder-gray-600 max-[390px]:block"
+      />
+      <a
+        class="watchlist-button w-40 px-2 py-2 mb-2 bg-gray-300 rounded-2xl text-center font-bold max-[390px]:hidden"
+        href="../watchlist"
+      >
+        <div>
+          <p><i class="fa-regular fa-bookmark"></i> Watchlist</p>
+        </div>
+      </a>
+      <a
+        class="hidden watchlist-button w-10 px-2 py-2 mb-2 bg-gray-300 rounded-2xl text-center font-bold max-[390px]:block"
+        href="#"
+      >
+        <div>
+          <p><i class="fa-regular fa-bookmark"></i></p>
+        </div>
       </a>
     </header>
-    <main id="movie-detail-id"></main>
+    <main id="movie-detail-id" class="flex justify-between flex-wrap"></main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./movie.js"></script>
   </body>

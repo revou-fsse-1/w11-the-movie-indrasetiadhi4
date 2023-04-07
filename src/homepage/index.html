@@ -3,37 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/ebafe5899b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <header>
-      <div class="container flex">
-        <a class="home-button" href="#">
+  <body class="mx-24 max-[390px]:mx-2">
+    <header
+      class="flex flex-wrap justify-between my-12 items-start max-[390px]:items-center"
+    >
+      <div>
+        <a
+          class="home-button text-4xl text-left leading-normal font-bold"
+          href="#"
+        >
           <h1>The<br />Movie<br />Watchlist</h1>
         </a>
       </div>
-      <input type="text" placeholder="Search a movie or a series" />
-      <a class="watchlist-button" href="../watchlist">
-        <div><p>Watchlist</p></div>
+      <input
+        type="text"
+        placeholder="🔍 Search a movie or a series"
+        class="w-96 px-2 py-2 mb-2 bg-gray-300 rounded-2xl text-center font-medium placeholder-gray-900 focus:placeholder-gray-600 max-[390px]:hidden"
+      />
+      <input
+        type="text"
+        placeholder="🔍"
+        class="hidden w-10 px-2 py-2 mb-2 bg-gray-300 rounded-full text-center font-medium placeholder-gray-900 focus:placeholder-gray-600 max-[390px]:block"
+      />
+      <a
+        class="watchlist-button w-40 px-2 py-2 mb-2 bg-gray-300 rounded-2xl text-center font-bold max-[390px]:hidden"
+        href="../watchlist"
+      >
+        <div>
+          <p><i class="fa-regular fa-bookmark"></i> Watchlist</p>
+        </div>
+      </a>
+      <a
+        class="hidden watchlist-button w-10 px-2 py-2 mb-2 bg-gray-300 rounded-2xl text-center font-bold max-[390px]:block"
+        href="#"
+      >
+        <div>
+          <p><i class="fa-regular fa-bookmark"></i></p>
+        </div>
       </a>
     </header>
     <main>
-      <div>
+      <div class="flex flex-wrap justify-between">
         <section>
-          <h2>Currently Watching</h2>
-          <div id="current-watch-list"></div>
+          <h2 class="mb-4 font-bold text-lg">Currently Watching</h2>
+          <div id="current-watch-list" class="flex flex-wrap gap-4 mb-12"></div>
         </section>
         <section>
-          <h2>Suggested to Watch</h2>
-          <div id="suggested-watch-list"></div>
-        </section>
-      </div>
-      <div>
-        <section>
-          <h2>Previously Watched</h2>
-          <div id="previous-watch-list"></div>
+          <h2 class="mb-4 font-bold text-lg">Suggested to Watch</h2>
+          <div
+            id="suggested-watch-list"
+            class="flex flex-wrap gap-4 mb-12"
+          ></div>
         </section>
       </div>
+
+      <section>
+        <h2 class="mb-4 font-bold text-lg">Previously Watched</h2>
+        <div id="previous-watch-list" class="flex flex-wrap gap-4 mb-10"></div>
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./homepage.js"></script>

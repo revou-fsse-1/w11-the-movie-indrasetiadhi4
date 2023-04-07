@@ -28,7 +28,7 @@ function registerAccount() {
     }
 
     if (password !== confirmPassword) {
-      alert("Password not match");
+      alert("Password do not match, please try again.");
       return;
     }
 
@@ -38,9 +38,9 @@ function registerAccount() {
       password: password,
     });
 
-    alert("Register success");
+    alert("Registration successful! Please log in to continue.");
 
-    window.location.href = "../dashboard";
+    window.location.href = "../";
   });
 }
 

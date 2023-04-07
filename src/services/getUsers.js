@@ -8,6 +8,7 @@ async function getAllUsers() {
     return response.data;
   } catch (err) {
     console.log(err);
+    alert(err.message);
   }
 }
 

@@ -12,18 +12,18 @@ function verifyLogin() {
 
     const checkUsername = users.some((user) => user.username === username);
     if (!checkUsername) {
-      alert("Username not found");
+      alert("Invalid username or password, please try again.");
       return;
     }
 
     const userDB = users.find((user) => user.username === username);
     const checkPassword = userDB.password === password;
     if (!checkPassword) {
-      alert("Incorrect Password");
+      alert("Invalid username or password, please try again.");
       return;
     }
 
-    alert("Login success");
+    alert("Login successful!");
 
     window.location.href = "./homepage";
   });
